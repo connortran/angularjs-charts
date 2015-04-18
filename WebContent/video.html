@@ -1,0 +1,38 @@
+<div class="row">
+	<div class="col-sm-9">
+		<div class="main-content">
+			<div id="container"
+				style="min-width: 310px; height: 500px; margin: 0 auto"></div>
+		</div>
+		<div class="main-content">
+			<div id="columnchart_material"></div>
+		</div>
+		<div class="main-content">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>VIDEO ID</th>
+						<th>CATEGORY ID</th>
+						<th>VIDEO NAME</th>
+						<th>LIKE COUNT</th>
+						<th>DISLIKE COUNT</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="video in videos">
+						<td>{{video.videoId}}</td>
+						<td>{{video.categoryId}}</td>
+						<td>{{video.videoName}}</td>
+						<td>{{video.likeCount}}</td>
+						<td>{{video.dislikeCount}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<ul ng-repeat="category in categories">
+			<li ng-click="getVideosByCategoryId(category)">{{category.categoryName}}</li>
+		</ul>
+	</div>
+</div>
